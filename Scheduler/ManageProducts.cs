@@ -8,14 +8,12 @@ namespace BasicService.Scheduler
     {
         private WooCommerceApiService _Service;
         private DblocaleContext _contextEF;
-        private int _DefaultPriceList;
 
-        public ManageProducts(WooCommerceApiService Service, DblocaleContext contextEF, int DefaultPriceList)
+        public ManageProducts(WooCommerceApiService Service, DblocaleContext contextEF)
         {
             //costruttore
             _Service = Service;
             _contextEF = contextEF;
-            _DefaultPriceList = DefaultPriceList;
         }
 
         public async Task<bool> DoOperation()
@@ -42,14 +40,12 @@ namespace BasicService.Scheduler
                         {
                             //aggiornamento o creazione prodotto
                             //recupero prezzo prodotto
-                            var listino = _contextEF.InfoListiniPrezziArticolis.FirstOrDefault(x => x.IdinfoListiniPrezzi == _DefaultPriceList && x.IdinfoArticoli == product.IdinfoArticoli);
-                            decimal productprice = listino?.prezzo != null ? Convert.ToDecimal(listino.prezzo) : 0;
-                            decimal productsaleprice = listino?.prezzoScontato != null ? Convert.ToDecimal(listino.prezzoScontato) : productprice;
-                            int vatcode = product.IdinfoTabellaCodiciIva != null ? (int)product.IdinfoTabellaCodiciIva : 0;
+                            decimal productprice = 0;
+                            decimal productsaleprice = 0;
+                            int vatcode = 0;
 
                             //recupero i dati da ecommercecategorie per prendere l'id remoto relativo all'id categoria del prodotto
                             var ecommcat = _contextEF.EcommerceCategories.FirstOrDefault(x => x.IdInfoArticoliCategorie == product.IdinfoArticoliCategorie);
-                            var currcat = _contextEF.InfoArticoliCategories.FirstOrDefault(x => x.IdinfoArticoliCategorie == product.IdinfoArticoliCategorie);
 
                             //struttura prodotto
                             Product newproduct = new()
