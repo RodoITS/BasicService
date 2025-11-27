@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|d:\\apps\\microsoft visual studio\\documents\\basicservice (3)\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|d:\\apps\\microsoft visual studio\\documents\\basicservice (3)\\dblocalecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|solutionrelative:dblocalecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|d:\\apps\\microsoft visual studio\\documents\\basicservice (3)\\scheduler\\syncdatascheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|solutionrelative:scheduler\\syncdatascheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|d:\\apps\\microsoft visual studio\\documents\\basicservice (3)\\service\\woocommerceapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|solutionrelative:service\\woocommerceapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|d:\\apps\\microsoft visual studio\\documents\\basicservice (3)\\modules\\woocommerce\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B7414ED-7B9D-4183-A720-600C2FB80F28}|BasicService.csproj|solutionrelative:modules\\woocommerce\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SyncDataScheduler.cs",
+              "DocumentMoniker": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\Scheduler\\SyncDataScheduler.cs",
+              "RelativeDocumentMoniker": "Scheduler\\SyncDataScheduler.cs",
+              "ToolTip": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\Scheduler\\SyncDataScheduler.cs",
+              "RelativeToolTip": "Scheduler\\SyncDataScheduler.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAmwFgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:42:52.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WooCommerceApiService.cs",
+              "DocumentMoniker": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\Service\\WooCommerceApiService.cs",
+              "RelativeDocumentMoniker": "Service\\WooCommerceApiService.cs",
+              "ToolTip": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\Service\\WooCommerceApiService.cs",
+              "RelativeToolTip": "Service\\WooCommerceApiService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAwwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:42:52.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\Modules\\WooCommerce\\Category.cs",
+              "RelativeDocumentMoniker": "Modules\\WooCommerce\\Category.cs",
+              "ToolTip": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\Modules\\WooCommerce\\Category.cs",
+              "RelativeToolTip": "Modules\\WooCommerce\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:42:52.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DblocaleContext.cs",
+              "DocumentMoniker": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\DblocaleContext.cs",
+              "RelativeDocumentMoniker": "DblocaleContext.cs",
+              "ToolTip": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\DblocaleContext.cs",
+              "RelativeToolTip": "DblocaleContext.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAEwBQAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:42:52.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T01:42:52.127Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
