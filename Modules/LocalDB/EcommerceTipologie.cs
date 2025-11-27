@@ -14,4 +14,10 @@ public partial class EcommerceTipologie
     public int? Pubblica { get; set; }
 
     public int? ImmaginiUploaded { get; set; }
+
+    public long? Idremoto { get; set; }
+
+    public DateTime? Createdon { get; set; }
+
+    public DateTime? Updatedon { get; set; }
 }

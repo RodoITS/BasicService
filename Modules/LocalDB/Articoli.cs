@@ -70,9 +70,4 @@ public partial class Articoli
     public int? Reparto { get; set; }
 
     public int? MagazzinoStatoId { get; set; }
-
-    //chiave esterna
-    public virtual ArticoliCategorie Categories { get; set; } = null!;
-    //chiave esterna
-    public virtual ArticoliTipologie Tipologies { get; set; } = null!;
 }

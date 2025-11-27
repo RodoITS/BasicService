@@ -104,7 +104,6 @@ public partial class DblocaleContext : DbContext
     {
         optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 
-
 #if DEBUG
         optionsBuilder
             .LogTo(Console.WriteLine, new[] { RelationalEventId.CommandExecuted })
@@ -161,15 +160,7 @@ public partial class DblocaleContext : DbContext
             entity.Property(e => e.TipoArticolo).HasColumnName("Tipo_Articolo");
             entity.Property(e => e.UnitaMisura).HasMaxLength(5);
 
-            entity.HasOne(d => d.Categories).WithMany(p => p.Articolis)
-                .HasForeignKey(d => d.IdinfoArticoliCategorie)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("articoli_articoli_categorie_FK");
-
-            entity.HasOne(d => d.Tipologies).WithMany(p => p.Articolis)
-                .HasForeignKey(d => d.IdinfoArticoliTipologie)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("articoli_articoli_tipologie_FK");
+           
         });
 
         modelBuilder.Entity<ArticoliCategorie>(entity =>
@@ -438,9 +429,7 @@ public partial class DblocaleContext : DbContext
                 .HasMaxLength(20)
                 .HasColumnName("Tracking_Number");
 
-            entity.HasOne(d => d.ClientiFornitoriAgentis).WithMany(p => p.Documentis)
-                .HasForeignKey(d => d.IdinfoClientiFornitoriAgenti)
-                .HasConstraintName("documenti_clienti_fornitori_agenti_FK");
+ 
         });
 
         modelBuilder.Entity<DocumentiAspettocolli>(entity =>
@@ -610,10 +599,7 @@ public partial class DblocaleContext : DbContext
             entity.Property(e => e.IdinfoListini).HasColumnName("IDInfo_Listini");
             entity.Property(e => e.IdinfoArticoli).HasColumnName("IDInfo_Articoli");
 
-            entity.HasOne(d => d.Listinis).WithMany(p => p.ListiniArticolis)
-                .HasForeignKey(d => d.IdinfoListini)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("listini_articoli_listini_FK");
+  
         });
 
         modelBuilder.Entity<Magazzini>(entity =>

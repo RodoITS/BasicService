@@ -16,4 +16,10 @@ public partial class EcommerceArticoli
     public int? ImmaginiUploaded { get; set; }
 
     public DateTime? DataOraModifica { get; set; }
+
+    public long? Idremoto { get; set; }
+
+    public DateTime? Createdon { get; set; }
+
+    public DateTime? Updatedon { get; set; }
 }

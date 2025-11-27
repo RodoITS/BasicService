@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-
+﻿
 namespace BasicService.Modules.WooCommerce
 {
     public class Product
     {
-        public string title { get; set; }
+        public string name { get; set; }
         public int id { get; set; }
         public string created_at { get; set; }
         public string updated_at { get; set; }
@@ -26,7 +20,7 @@ namespace BasicService.Modules.WooCommerce
         public bool taxable { get; set; }
         public string tax_status { get; set; }
         public string tax_class { get; set; }
-        public bool managing_stock { get; set; }
+        public bool manage_stock { get; set; }
         public int? stock_quantity { get; set; }
         public bool in_stock { get; set; }
         public bool backorders_allowed { get; set; }
@@ -54,7 +48,8 @@ namespace BasicService.Modules.WooCommerce
         public List<object> upsell_ids { get; set; }
         public List<object> cross_sell_ids { get; set; }
         public int parent_id { get; set; }
-        public List<object> categories { get; set; }
+        public List<Brand> brands { get; set; }
+        public List<Category> categories { get; set; }
         public List<object> tags { get; set; }
         public List<Image> images { get; set; }
         public string featured_src { get; set; }

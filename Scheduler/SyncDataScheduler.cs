@@ -1,5 +1,6 @@
 ﻿using BasicService.Configuration;
 using BasicService.Modules;
+using BasicService.Modules.LocalDB;
 using BasicService.Modules.WooCommerce;
 using BasicService.Service;
 using Microsoft.EntityFrameworkCore;
@@ -23,86 +24,78 @@ namespace BasicService.Scheduler
         {
             _logger.LogInformation($"Avvio sincronizzazione: {DateTime.Now.ToLongTimeString()}");
 
-            // Lettura dati passati dallo schedulatore
+            //Lettura dati passati dallo schedulatore
             var dataMap = context.MergedJobDataMap;
             string connectionString = dataMap.GetString("connectionString");
             string wcsettings_str = dataMap.GetString("wcsettings");
             WooCommerceSettings wcsettings = JsonConvert.DeserializeObject<WooCommerceSettings>(wcsettings_str);
 
-            // Creo un oggetto di tipo DbLocaleContext
+            //Creo un oggetto di tipo DbLocaleContext
             using DblocaleContext contextEF = new DblocaleContext(connectionString);
 
-            // -----------------------------
-            // SINCRONIZZAZIONE DATI
-            // Create WooCommerce service
+            //SINCRONIZZAZIONE DATI
+
+            //Create woocommerce service
             WooCommerceApiService Service = new WooCommerceApiService(wcsettings.Url, wcsettings.Key, wcsettings.Secret);
 
-            // Get products
-            var products = await Service.GetProductsAsync();
-            // Get categories
-            var categories = await Service.GetCategoriesAsync();
+            //AGGIORNAMENTO CATEGORIE
+            ManageCategories CategoryManager = new ManageCategories(Service, contextEF);
+            var rescat = await CategoryManager.DoOperation();
 
-            // -----------------------------
-            // Creazione nuovo prodotto
-            Product newProduct = new Product
-            {
-                name = "Prodotto Test",
-                type = "simple",
-                regular_price = "19.99",
-                description = "Prodotto creato da API"
-            };
+            //AGGIORNAMENTO BRANDS
+            ManageBrands BrandsManager = new ManageBrands(Service, contextEF);
+            var resbrand = await BrandsManager.DoOperation();
 
-            var createdProduct = await Service.CreateProductAsync(newProduct);
-            if (createdProduct != null)
-            {
-                Console.WriteLine($"Creato prodotto con ID: {createdProduct.id}");
+            //AGGIORNAMENTO PRODUCTS
+            ManageProducts ProductsManager = new ManageProducts(Service, contextEF, wcsettings.DefaultPriceList);
+            var resprod = await ProductsManager.DoOperation();
 
-                // Aggiornamento prodotto
-                Product updatedProduct = new Product
-                {
-                    name = "Prodotto Test Aggiornato",
-                    regular_price = "24.99"
-                };
 
-                var updatedProductResult = await Service.UpdateProductAsync(createdProduct.id, updatedProduct);
-                Console.WriteLine($"Aggiornato prodotto con ID: {updatedProductResult?.id}");
-            }
-            else
-            {
-                Console.WriteLine("Errore: creazione prodotto fallita");
-            }
+            //Get products
+            //var products = await Service.GetProductsAsync();
+            ////Get categoreies
+            //var categories = await Service.GetCategoriesAsync();
+            ////Get brands
+            //var brands = await Service.GetBrandsAsync();
 
-            // -----------------------------
-            // Creazione nuova categoria
-            Category newCategory = new Category
-            {
-                name = "Categoria Test",
-                description = "Creata tramite API"
-            };
+            ////Creazione categoria
+            //Category category = new Category()
+            //{
+            //    name = "create3 category",
+            //    description = "create",
+            //    parent = 0,
+            //    slug = "create3category"
+            //};
+            //category = await Service.CreateNewCategoryAsync(category);
 
-            var createdCategory = await Service.CreateCategoryAsync(newCategory);
-            if (createdCategory != null)
-            {
-                Console.WriteLine($"Categoria creata con ID: {createdCategory.id}");
+            ////Aggiornamento categoria
+            //category.description += " - UPDATED";
+            //long id = category.id ?? 0;
+            //category.id = null;
+            //category = await Service.UpdateCategoryAsync(id, category);
 
-                // Aggiornamento categoria
-                Category updatedCategory = new Category
-                {
-                    name = "Categoria Test Aggiornata",
-                    description = "Descrizione aggiornata"
-                };
+            //Eliminazione categoria
+            //category = await Service.DeleteCategoryAsync(id, category);
 
-                var updatedCategoryResult = await Service.UpdateCategoryAsync(createdCategory.id, updatedCategory);
-                Console.WriteLine($"Categoria aggiornata con ID: {updatedCategoryResult?.id}");
-            }
-            else
-            {
-                Console.WriteLine("Errore: creazione categoria fallita");
-            }
+            //Product product = new Product()
+            //{
+            //    id = 0,
+            //    title = "test product",
+            //    price = "10.0",
+            //    sku = "TESTPRODUCT"
+            //};
+            //product = await Service.CreateNewProductAsync(product);
 
-            // -----------------------------
+            //Brand brand = new Brand()
+            //{
+            //    name = "new brand",
+            //    description = "brand",
+            //    parent = 0,
+            //    slug = "newbrand"
+            //};
+            //brand = await Service.CreateNewBrandAsync(brand);
+
             Console.WriteLine("TEST");
-
             /*
             //COMANDI LINQ (Language Integrated Query)
             //prendo tutti gli articoli
@@ -161,5 +154,7 @@ namespace BasicService.Scheduler
 
             _logger.LogInformation($"Fine sincronizzazione: {DateTime.Now.ToLongTimeString()}");
         }
+
     }
+
 }

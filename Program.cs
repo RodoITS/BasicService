@@ -1,4 +1,3 @@
-using BasicService;
 using BasicService.Configuration;
 using BasicService.Scheduler;
 using Microsoft.EntityFrameworkCore;

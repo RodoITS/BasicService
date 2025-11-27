@@ -5,5 +5,6 @@
         public string Url { set; get; }
         public string Key { set; get; }
         public string Secret { set; get; }
+        public int DefaultPriceList { set; get; }
     }
 }

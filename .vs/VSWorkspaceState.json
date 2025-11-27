@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin",
+    "\\bin\\Release",
+    "\\obj",
+    "\\obj\\Debug",
+    "\\obj\\Release",
+    "\\Properties",
+    "\\Properties\\PublishProfiles"
   ],
-  "SelectedNode": "\\BasicService.sln",
   "PreviewInSolutionExplorer": false
 }

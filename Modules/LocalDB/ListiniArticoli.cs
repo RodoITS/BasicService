@@ -17,5 +17,5 @@ public partial class ListiniArticoli
 
     public int? ScontoMaggiorazione3 { get; set; }
 
-    public virtual Listini Listinis { get; set; } = null!;
+    public virtual Listini IdinfoListiniNavigation { get; set; } = null!;
 }

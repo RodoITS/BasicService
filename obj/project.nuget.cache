@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wwyXoOLR46I=",
+  "dgSpecHash": "MfrEp8PEr/w=",
   "success": true,
   "projectFilePath": "D:\\Apps\\Microsoft Visual Studio\\Documents\\BasicService (3)\\BasicService.csproj",
   "expectedPackageFiles": [
@@ -56,13 +56,7 @@
     "C:\\Users\\rodol\\.nuget\\packages\\quartz.extensions.hosting\\3.14.0\\quartz.extensions.hosting.3.14.0.nupkg.sha512",
     "C:\\Users\\rodol\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\rodol\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.6\\system.diagnostics.eventlog.9.0.6.nupkg.sha512",
-    "C:\\Users\\rodol\\.nuget\\packages\\system.serviceprocess.servicecontroller\\9.0.6\\system.serviceprocess.servicecontroller.9.0.6.nupkg.sha512",
-    "C:\\Users\\rodol\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\rodol\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\rodol\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.11\\microsoft.windowsdesktop.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\rodol\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\rodol\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.11\\microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\rodol\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.11\\microsoft.netcore.app.host.win-x64.9.0.11.nupkg.sha512"
+    "C:\\Users\\rodol\\.nuget\\packages\\system.serviceprocess.servicecontroller\\9.0.6\\system.serviceprocess.servicecontroller.9.0.6.nupkg.sha512"
   ],
   "logs": []
 }

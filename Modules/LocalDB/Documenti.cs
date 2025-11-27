@@ -165,5 +165,5 @@ public partial class Documenti
 
     public virtual ICollection<DocumentiRighe> DocumentiRighes { get; set; } = new List<DocumentiRighe>();
 
-    public virtual ClientiFornitoriAgenti? ClientiFornitoriAgentis { get; set; }
+    public virtual ClientiFornitoriAgenti? IdinfoClientiFornitoriAgentiNavigation { get; set; }
 }

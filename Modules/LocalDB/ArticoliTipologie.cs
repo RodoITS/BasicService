@@ -15,5 +15,4 @@ public partial class ArticoliTipologie
 
     public int? TempId { get; set; }
 
-    public virtual ICollection<Articoli> Articolis { get; set; } = new List<Articoli>();
 }

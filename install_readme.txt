@@ -24,3 +24,6 @@ dotnet ef database update
 
 #Ricreare struttura classi a partire da db
 dotnet ef dbcontext scaffold "Server=127.0.0.1;database=dblocale;user id=root;password=mypassword;port=3306;" Pomelo.EntityFrameworkCore.MySql
+
+#Aggiornare struttura classi db indicando in quale path scrivere (--output-dir) e sovrascrivendo tutto (-f)
+dotnet ef dbcontext scaffold "Server=127.0.0.1;database=dblocale;user id=root;password=mypassword;port=3306;" Pomelo.EntityFrameworkCore.MySql --output-dir Modules\LocalDB -f
